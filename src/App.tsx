@@ -14,10 +14,10 @@ const App: React.FC = () => {
       <Navbar />
       <Hero />
       <About />
-      <Galery />
-      <Pricing />
       <Tattoo />
+      <Pricing />
       <Team />
+      <Galery />
       <Footer />
     </div>
   );
