@@ -1,0 +1,8 @@
+.hero {
+    max-height: 100vh !important; // Altura padrão para telas grandes
+  
+    @media (max-width: 768px) {
+      height: 60vh; // Altura para telas menores
+    }
+  }
+  
