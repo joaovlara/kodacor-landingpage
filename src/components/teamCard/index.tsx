@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 const TeamCard: React.FC = () => {
     return (
         <Card>
-            <Card.Img variant="top" src="holder.js/100px160" />
+            <Card.Img variant="top" src="src/assets/images/person_1.jpg" />
             <Card.Body className='text-center'>
                 <Card.Title>Card title</Card.Title>
             </Card.Body>
