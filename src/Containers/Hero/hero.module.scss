@@ -1,8 +1,13 @@
-.hero {
-    max-height: 100vh !important; // Altura padrão para telas grandes
-  
-    @media (max-width: 768px) {
-      height: 60vh; // Altura para telas menores
-    }
-  }
-  
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.fade-in {
+  opacity: 1;
+}
+
+.fade-out {
+  opacity: 0;
+}

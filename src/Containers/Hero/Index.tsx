@@ -1,47 +1,51 @@
-import React from 'react';
-import Carousel from 'react-bootstrap/Carousel';
-import ExampleCarouselImage from '..//..//assets/img/bakckground_1.png';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Button } from 'react-bootstrap';
+import BackgroundImage1 from '../../assets/img/bakckground_1.png';
+import BackgroundImage2 from '../../assets/img/bg-2.jpg';
+import './hero.module.scss'
 
 const Hero: React.FC = () => {
+  const [currentImage, setCurrentImage] = useState(BackgroundImage1);
+  const images = [BackgroundImage1, BackgroundImage2];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage(prevImage => {
+        const currentIndex = images.indexOf(prevImage);
+        const nextIndex = (currentIndex + 1) % images.length;
+        return images[nextIndex];
+      });
+    }, 5000);
+    return () => clearInterval(interval);
+  }, [images]);
+
   return (
-    <section style={{ height: '100vh' }}>
-      <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            src={ExampleCarouselImage}
-            alt="First slide"
-            className="fluid w-100"
-          />
-          <Carousel.Caption className="d-flex flex-column justify-content-center h-100">
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            src={ExampleCarouselImage}
-            alt="Second slide"
-            className="d-block w-100"
-          />
-          <Carousel.Caption className="d-flex flex-column justify-content-center h-100">
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            src={ExampleCarouselImage}
-            alt="Third slide"
-            className="d-block w-100"
-          />
-          <Carousel.Caption className="d-flex flex-column justify-content-center h-100">
-            <h3>Third slide label</h3>
-            <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </section>
+    <div
+      className="hero-section d-flex align-items-center justify-content-center"
+      style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(${currentImage})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '100vh',
+        transition: 'background-image 1s ease-in-out',
+      }}
+    >
+      <Container className="text-center text-white">
+        <Row>
+          <Col>
+            <p className="lead">Boas Vindas ao Estudio</p>
+            <h1 className="display-4 fw-bold">
+              ESTUDIO DE TATUAGEM <br />
+              E BODY PIERCING
+            </h1>
+            <div className="d-grid gap-2 d-md-flex justify-content-md-center">
+              <Button variant="outline-light" size="lg" className="px-4">Ver Galeria</Button>
+            </div>
+          </Col>
+        </Row>
+      </Container>
+    </div>
   );
-}
+};
 
 export default Hero;
