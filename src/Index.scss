@@ -1,4 +1,15 @@
-// Variable overrides first
-
-// Then import Bootstrap
-@import "../node_modules/bootstrap/scss/bootstrap";
+// Variáveis e sobrescritas de fonte primeiro
+.rozha-one-regular {
+    font-family: "Rozha One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  // Aplica a fonte a todos os títulos
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Rozha One", serif;
+  }
+  
+  // Depois, importe o Bootstrap
+  @import "../node_modules/bootstrap/scss/bootstrap";
+  
