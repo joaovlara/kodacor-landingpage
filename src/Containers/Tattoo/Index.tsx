@@ -9,8 +9,17 @@ import TattooItem from '../../components/tattooItem/Index';
 const Tattoo: React.FC = () => {
   return (
     <section>
-      <Container className='text-center'>
+      <Container className='text-center m-5'>
         <Row>
+          <Col>
+            <TattooItem />
+          </Col>
+          <Col>
+            <TattooItem />
+          </Col>
+          <Col>
+            <TattooItem />
+          </Col>
           <Col>
             <TattooItem />
           </Col>
