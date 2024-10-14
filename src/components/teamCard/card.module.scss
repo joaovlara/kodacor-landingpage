@@ -1,30 +1,51 @@
 .card {
-    position: relative;
-}
+    & .team-item {
+        position: relative;
+        overflow: hidden;
+    }
 
-.social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 10px; // Espaço entre os ícones
-    position: absolute;
-    bottom: 10px; // Posiciona os ícones acima do rodapé
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0; // Oculta os ícones inicialmente
-    transition: opacity 0.3s ease; // Transição suave para a opacidade
-}
+    & .team-text {
+        position: relative;
+        height: 100px;
+        overflow: hidden;
+    }
 
-.card:hover .social-icons {
-    opacity: 1; // Mostra os ícones ao passar o mouse
-}
+    & .team-title {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: var(--light);
+        transition: 0.5s;
+    }
 
-.icon {
-    color: black; // Cor dos ícones
-    font-size: 1.5rem; // Tamanho dos ícones
-    text-decoration: none; // Remove underline
-    transition: color 0.3s; // Transição de cor
-}
+    &:hover .team-title {
+        top: -100px;
+    }
 
-.icon:hover {
-    color: #ffd700; // Cor ao passar o mouse nos ícones
+    & .team-social {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 100px;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        transition: 0.5s;
+    }
+
+    & .team-social .btn {
+        margin: 0 3px;
+    }
+
+    &:hover .team-social {
+        top: 0;
+    }
 }

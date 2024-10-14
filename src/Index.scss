@@ -9,7 +9,31 @@
   h1, h2, h3, h4, h5, h6 {
     font-family: "Rozha One", serif;
   }
-  
+
+/* Para navegadores WebKit (Chrome, Safari) */
+::-webkit-scrollbar {
+  width: 8px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: transparent; /* Fundo transparente da barra de rolagem */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(136, 136, 136, 0.7); /* Cor da parte deslizante com transparência */
+  border-radius: 50px; /* Arredondamento da parte deslizante */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(136, 136, 136, 1); /* Cor da parte deslizante ao passar o mouse */
+}
+
+/* Para Firefox */
+* {
+  scrollbar-width: thin; /* Largura da barra de rolagem */
+  scrollbar-color: rgba(136, 136, 136, 0.7) transparent; /* Cor do thumb e do track */
+}
+
   // Depois, importe o Bootstrap
   @import "../node_modules/bootstrap/scss/bootstrap";
   
