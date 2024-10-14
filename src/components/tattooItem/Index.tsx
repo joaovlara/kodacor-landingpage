@@ -1,12 +1,18 @@
-import React from 'react'
+import React from 'react';
+import styles from './tattooItem.module.scss'; // Adicione um arquivo de estilo
 
-const TattooItem: React.FC = () => {
-    return (
-        <div>
-            <img src="src/assets/svg/brush-mark-svgrepo-com.svg" alt="" />
-            <h3>Estilos</h3>
-        </div>
-    )
+interface TattooItemProps {
+  image: string;
+  title: string;
 }
 
-export default TattooItem
+const TattooItem: React.FC<TattooItemProps> = ({ image, title }) => {
+  return (
+    <div className={styles.tattooItem}>
+      <img src={image} alt={title} />
+      <h3>{title}</h3>
+    </div>
+  );
+}
+
+export default TattooItem;
