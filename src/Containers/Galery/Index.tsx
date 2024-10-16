@@ -1,6 +1,16 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 
+// Importando as imagens
+import Work1 from '../../assets/images/work-1.jpg';
+import Work2 from '../../assets/images/work-2.jpg';
+import Work3 from '../../assets/images/work-3.jpg';
+import Work4 from '../../assets/images/work-4.jpg';
+import Work5 from '../../assets/images/work-5.jpg';
+import Work6 from '../../assets/images/work-6.jpg';
+import Work7 from '../../assets/images/work-7.jpg';
+import Work8 from '../../assets/images/work-8.jpg';
+
 const Galery: React.FC = () => {
   return (
     <section className="ftco-section ftco-no-pt ftco-no-pb">
@@ -16,42 +26,42 @@ const Galery: React.FC = () => {
         <Row className="no-gutters">
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-1.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work1} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-2.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work2} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-3.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work3} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-4.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work4} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-5.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work5} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-6.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work6} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-7.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work7} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
           <Col md={6} lg={3} className="p-0">
             <div className="project">
-              <img src="src/assets/images/work-8.jpg" className="img-fluid" alt="Colorlib Template" />
+              <img src={Work8} className="img-fluid" alt="Colorlib Template" />
             </div>
           </Col>
         </Row>
