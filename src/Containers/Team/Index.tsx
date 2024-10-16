@@ -2,12 +2,19 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import TeamCard from '../../components/teamCard';
 
+// Importação das imagens
+import Person1 from "../../assets/images/person_1.jpg";
+import Person2 from "../../assets/images/person_2.jpg";
+import Person3 from "../../assets/images/person_3.jpg";
+import Person4 from "../../assets/images/person_4.jpg";
+import Person5 from "../../assets/images/person_1.jpg";
+
 const Team: React.FC = () => {
   const teamMembers = [
     {
       name: "Full Name 1",
       designation: "Designation 1",
-      image: "src/assets/images/person_1.jpg",
+      image: Person1,
       facebookUrl: "#",
       twitterUrl: "#",
       instagramUrl: "#",
@@ -15,7 +22,7 @@ const Team: React.FC = () => {
     {
       name: "Full Name 2",
       designation: "Designation 2",
-      image: "src/assets/images/person_2.jpg",
+      image: Person2,
       facebookUrl: "#",
       twitterUrl: "#",
       instagramUrl: "#",
@@ -23,7 +30,7 @@ const Team: React.FC = () => {
     {
       name: "Full Name 3",
       designation: "Designation 3",
-      image: "src/assets/images/person_3.jpg",
+      image: Person3,
       facebookUrl: "#",
       twitterUrl: "#",
       instagramUrl: "#",
@@ -31,15 +38,15 @@ const Team: React.FC = () => {
     {
       name: "Full Name 4",
       designation: "Designation 4",
-      image: "src/assets/images/person_4.jpg",
+      image: Person4,
       facebookUrl: "#",
       twitterUrl: "#",
       instagramUrl: "#",
     },
     {
-      name: "Full Name 5",
+      name: "Full Name 1",
       designation: "Designation 5",
-      image: "src/assets/images/person_1.jpg",
+      image: Person5,
       facebookUrl: "#",
       twitterUrl: "#",
       instagramUrl: "#",
