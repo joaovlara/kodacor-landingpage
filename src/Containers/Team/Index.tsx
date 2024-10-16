@@ -1,74 +1,70 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import TeamCard from '../../components/teamCard';
 
 const Team: React.FC = () => {
+  const teamMembers = [
+    {
+      name: "Full Name 1",
+      designation: "Designation 1",
+      image: "src/assets/images/person_1.jpg",
+      facebookUrl: "#",
+      twitterUrl: "#",
+      instagramUrl: "#",
+    },
+    {
+      name: "Full Name 2",
+      designation: "Designation 2",
+      image: "src/assets/images/person_2.jpg",
+      facebookUrl: "#",
+      twitterUrl: "#",
+      instagramUrl: "#",
+    },
+    {
+      name: "Full Name 3",
+      designation: "Designation 3",
+      image: "src/assets/images/person_3.jpg",
+      facebookUrl: "#",
+      twitterUrl: "#",
+      instagramUrl: "#",
+    },
+    {
+      name: "Full Name 4",
+      designation: "Designation 4",
+      image: "src/assets/images/person_4.jpg",
+      facebookUrl: "#",
+      twitterUrl: "#",
+      instagramUrl: "#",
+    },
+    {
+      name: "Full Name 5",
+      designation: "Designation 5",
+      image: "src/assets/images/person_1.jpg",
+      facebookUrl: "#",
+      twitterUrl: "#",
+      instagramUrl: "#",
+    },
+  ];
+
   return (
-    <section className="ftco-section ftco-team">
-      <div className="container-fluid px-md-5">
-        <div className="row justify-content-center pb-3">
-          <div className="col-md-10 heading-section text-center ftco-animate">
-            <span className="subheading">Artistic Director</span>
-            <h2 className="mb-4">Makeup Artist</h2>
-            <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12 ftco-animate">
-            <div className="carousel-team owl-carousel">
-              <div className="item">
-                <a href="#" className="team text-center">
-                  <div
-                    className="img"
-                    style={{ backgroundImage: 'url(images/stylist-1.jpg)' }}
-                  ></div>
-                  <h2>Danica Lewis</h2>
-                  <span className="position">Hair Stylist</span>
-                </a>
-              </div>
-              <div className="item">
-                <a href="#" className="team text-center">
-                  <div
-                    className="img"
-                    style={{ backgroundImage: 'url(images/stylist-2.jpg)' }}
-                  ></div>
-                  <h2>Nicole Simon</h2>
-                  <span className="position">Nail Master</span>
-                </a>
-              </div>
-              <div className="item">
-                <a href="#" className="team text-center">
-                  <div
-                    className="img"
-                    style={{ backgroundImage: 'url(images/stylist-3.jpg)' }}
-                  ></div>
-                  <h2>Cloe Meyer</h2>
-                  <span className="position">Director</span>
-                </a>
-              </div>
-              <div className="item">
-                <a href="#" className="team text-center">
-                  <div
-                    className="img"
-                    style={{ backgroundImage: 'url(images/stylist-4.jpg)' }}
-                  ></div>
-                  <h2>Rachel Clinton</h2>
-                  <span className="position">Hair Stylist</span>
-                </a>
-              </div>
-              <div className="item">
-                <a href="#" className="team text-center">
-                  <div
-                    className="img"
-                    style={{ backgroundImage: 'url(images/stylist-5.jpg)' }}
-                  ></div>
-                  <h2>Dave Buff</h2>
-                  <span className="position">Barber</span>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
+    <Container>
+      <div className="d-flex overflow-auto">
+        <Row className="flex-nowrap my-5">
+          {teamMembers.map((member, index) => (
+            <Col key={index} xs={12} sm={6} md={3} lg={3}>
+              <TeamCard
+                name={member.name}
+                designation={member.designation}
+                image={member.image}
+                facebookUrl={member.facebookUrl}
+                twitterUrl={member.twitterUrl}
+                instagramUrl={member.instagramUrl}
+              />
+            </Col>
+          ))}
+        </Row>
       </div>
-    </section>
+    </Container>
   );
 }
 

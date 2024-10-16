@@ -1,6 +1,5 @@
 import React from 'react';
-import Navbar from './components/navbar/Index';
-import About from './Containers/About/Index';
+import NavBar from './components/navbar/Index';
 import Footer from './Containers/Footer/Index';
 import Galery from './Containers/Galery/Index';
 import Hero from './Containers/Hero/Index';
@@ -10,14 +9,13 @@ import Team from './Containers/Team/Index';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Navbar />
+    <div className="overflow-hidden">
+      <NavBar />
       <Hero />
-      <About />
-      <Galery />
-      <Pricing />
       <Tattoo />
       <Team />
+      {/* <Pricing /> */}
+      <Galery />
       <Footer />
     </div>
   );

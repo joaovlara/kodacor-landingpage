@@ -1,27 +1,43 @@
-const Navbar = () => {
-  return (
-    <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-      <div className="container">
-        <a className="navbar-brand" href="index.html"><span
-          className="flaticon-scissors-in-a-hair-salon-badge"></span>Haircare</a>
-        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-          aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-          <span className="oi oi-menu"></span> Menu
-        </button>
+import React, { useEffect, useState } from 'react';
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
 
-        <div className="collapse navbar-collapse" id="ftco-nav">
-          <ul className="navbar-nav ml-auto">
-            <li className="nav-item active"><a href="index.html" className="nav-link">Home</a></li>
-            <li className="nav-item"><a href="services.html" className="nav-link">Services</a></li>
-            <li className="nav-item"><a href="gallery.html" className="nav-link">Gallery</a></li>
-            <li className="nav-item"><a href="about.html" className="nav-link">About</a></li>
-            <li className="nav-item"><a href="blog.html" className="nav-link">Blog</a></li>
-            <li className="nav-item"><a href="contact.html" className="nav-link">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-    </nav>
-  )
+const NavBar: React.FC = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  return (
+    <Navbar expand="lg" data-bs-theme="dark" className={scrolled ? "bg-dark"  : "bg-body-transparent"} fixed="top">
+      <Container>
+        <Navbar.Brand href="#home" className="text-white">KODACOR STUDIO</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav text-white" />
+        <Navbar.Collapse id="basic-navbar-nav text-white">
+          <Nav className="me-auto text-end">
+            <Nav.Link href="#home" className="text-white">Sobre</Nav.Link>
+            <Nav.Link href="#link" className="text-white">Serviços</Nav.Link>
+            <Nav.Link href="#link" className="text-white">Time</Nav.Link>
+            <Nav.Link href="#link" className="text-white">Galeria</Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
 }
 
-export default Navbar
+export default NavBar;

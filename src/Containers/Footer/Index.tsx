@@ -1,71 +1,49 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="ftco-footer ftco-section">
-      <div className="container">
-        <div className="row mb-5">
-          <div className="col-md">
-            <div className="ftco-footer-widget mb-4">
-              <h2 className="ftco-heading-2 logo">Haircare</h2>
-              <p>
-                Far far away, behind the word mountains, far from the countries Vokalia and Consonantia,
-                there live the blind texts.
-              </p>
-              <ul className="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
-                <li className="ftco-animate"><a href="#"><span className="icon-twitter"></span></a></li>
-                <li className="ftco-animate"><a href="#"><span className="icon-facebook"></span></a></li>
-                <li className="ftco-animate"><a href="#"><span className="icon-instagram"></span></a></li>
-              </ul>
+    <Container fluid className="bg-dark text-light py-4">
+      <footer>
+        <Row>
+          <Col className="text-center">
+            <div className="social-icons">
+              <FaFacebook className="me-1" />
+              <FaTwitter className="me-1" />
+              <FaInstagram className="me-1" />
+              <FaLinkedin className="me-1" />
             </div>
-          </div>
-          <div className="col-md">
-            <div className="ftco-footer-widget mb-4 ml-md-5">
-              <h2 className="ftco-heading-2">Information</h2>
-              <ul className="list-unstyled">
-                <li><a href="#" className="py-2 d-block">FAQs</a></li>
-                <li><a href="#" className="py-2 d-block">Privacy</a></li>
-                <li><a href="#" className="py-2 d-block">Terms Condition</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-md">
-            <div className="ftco-footer-widget mb-4">
-              <h2 className="ftco-heading-2">Links</h2>
-              <ul className="list-unstyled">
-                <li><a href="#" className="py-2 d-block">Home</a></li>
-                <li><a href="#" className="py-2 d-block">About</a></li>
-                <li><a href="#" className="py-2 d-block">Services</a></li>
-                <li><a href="#" className="py-2 d-block">Work</a></li>
-                <li><a href="#" className="py-2 d-block">Blog</a></li>
-                <li><a href="#" className="py-2 d-block">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="col-md">
-            <div className="ftco-footer-widget mb-4">
-              <h2 className="ftco-heading-2">Have a Questions?</h2>
-              <div className="block-23 mb-3">
-                <ul>
-                  <li><span className="icon icon-map-marker"></span><span className="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-                  <li><a href="#"><span className="icon icon-phone"></span><span className="text">+2 392 3929 210</span></a></li>
-                  <li><a href="#"><span className="icon icon-envelope"></span><span className="text">info@yourdomain.com</span></a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-12 text-center">
-            <p>
-              Copyright &copy; {new Date().getFullYear()} All rights reserved | This template is made with 
-              <i className="icon-heart color-danger" aria-hidden="true"></i> by 
-              <a href="https://colorlib.com" target="_blank" rel="noopener noreferrer">Colorlib</a>
-            </p>
-          </div>
-        </div>
-      </div>
-    </footer>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <ul className="nav justify-content-center border-bottom pb-3 mb-3">
+              <li className="nav-item">
+                <a href="#" className="nav-link px-2 text-light">Home</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link px-2 text-light">Features</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link px-2 text-light">Pricing</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link px-2 text-light">FAQs</a>
+              </li>
+              <li className="nav-item">
+                <a href="#" className="nav-link px-2 text-light">About</a>
+              </li>
+            </ul>
+          </Col>
+        </Row>
+        <Row>
+          <Col className="text-center">
+            <p className="text-light">&copy; 2024 Company, Inc</p>
+          </Col>
+        </Row>
+      </footer>
+    </Container>
   );
 }
 
